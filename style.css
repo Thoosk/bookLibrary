@@ -1,0 +1,392 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* RESET */
+/* prettier-ignore */
+html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 62.5%;
+        font: inherit;
+        font-family: calc;
+        vertical-align: baseline;
+    }
+/* HTML5 display-role reset for older browsers */
+/* prettier-ignore */
+article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+#bg-image {
+  position: absolute;
+  height: 100vw;
+  width: 100%;
+  background-image: url("images/patrick-tomasso-Oaqk7qqNh_c-unsplash(1).jpg");
+  filter: grayscale();
+  -webkit-filter: grayscale();
+  background-repeat: center;
+}
+
+#header,
+#book-list {
+  width: 100%;
+}
+
+#header {
+  margin-top: 1rem;
+  position: absolute;
+  top: 0;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+#header h1 {
+  margin-top: 3rem;
+  color: white;
+  align-self: flex-start;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 5rem;
+}
+#header p {
+  align-self: flex-start;
+}
+
+#header button {
+  align-self: flex-end;
+  width: 20rem;
+  padding: 0.35em 1.2em;
+  margin: 0 1rem 1rem 1rem;
+  border: 0.1em solid #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #9c9c9c;
+  text-align: center;
+  transition: all 0.2s;
+}
+#header button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-list {
+  height: 70vw;
+  margin-top: 15rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.book {
+  width: 25rem;
+  height: 40rem;
+  color: black;
+  font-size: 1rem;
+  margin: 1.5rem 2rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 0.2px;
+  word-spacing: 0.2px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: oblique;
+  font-variant: normal;
+  text-transform: capitalize;
+}
+
+#toggle {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  width: 2rem;
+}
+
+.on {
+  background-color: green;
+  border: 7px green solid;
+  border-radius: 100%;
+}
+
+.off {
+  background-color: whitesmoke;
+  border: 7px whitesmoke solid;
+  border-radius: 100%;
+}
+
+.book1 h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book1 h2 {
+  position: absolute;
+  margin-top: 2rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book1 p {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book1 button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #9c9c9c;
+  text-align: center;
+  transition: all 0.2s;
+}
+.book1 button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.book2 h1 {
+  margin-top: 1rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book2 h2 {
+  position: absolute;
+  margin-top: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book2 p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book2 button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #9c9c9c;
+  text-align: center;
+  transition: all 0.2s;
+}
+.book2 button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.book3 h1 {
+  margin-top: 1rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book3 h2 {
+  position: absolute;
+  margin-top: 2rem;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book3 p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book3 button {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #9c9c9c;
+  text-align: center;
+  transition: all 0.2s;
+}
+.book3 button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.book4 h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book4 h2 {
+  position: absolute;
+  margin-top: 2rem;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book4 p {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book4 button {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #9c9c9c;
+  text-align: center;
+  transition: all 0.2s;
+}
+.book4 button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+
+#popup {
+  display: none;
+  background-color: white;
+  border: #9c9c9c dotted 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px; /* adjust as per your needs */
+  height: 400px; /* adjust as per your needs */
+  margin-left: -200px; /* negative half of width above */
+  margin-top: -200px; /* negative half of height above */
+  z-index: 10;
+}
+
+#new-book-form {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-item {
+  margin-top: 1rem;
+}
+
+.remove {
+  border: none;
+}
