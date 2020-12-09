@@ -1,14 +1,16 @@
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.id = "";
-  this.sayInfo = function () {
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  sayInfo() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${
       this.read ? "read" : "not read yet"
     }`;
-  };
+  }
 }
 
 let myLibrary = [];
@@ -17,9 +19,6 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
   populateStorage();
 }
-
-// let newBook = new Book("test", "author", 100, true);
-// myLibrary.push(newBook);
 
 let bookButton = document.querySelector("#adding-button");
 let popUp = document.querySelector("#popup");
@@ -55,10 +54,6 @@ bookInList.addEventListener("click", () => {
       bookGenerator(book);
       alreadyDisplayed.push(book);
     }
-    // if (!alreadyDisplayed.includes(book)) {
-    //   bookGenerator(book);
-    //   alreadyDisplayed.push(book);
-    // }
   });
 
   removeButtons = Array.from(document.querySelectorAll(".remove"));
